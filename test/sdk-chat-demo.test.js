@@ -142,7 +142,7 @@ test('chat demo discovers a legacy CrunchyMurmur model and authenticates its gen
   const host = createModelHost({ roots: [root], installRoot: root });
   assert.deepEqual(host.list().map((model) => model.id), ['parakeet-v3']);
   assert.equal(Object.hasOwn(host.list()[0], 'trustedManifestSha256'), false);
-  assert.equal(host.resolve('parakeet-v3').directory, directory);
+  assert.equal(host.resolve('parakeet-v3').directory, fs.realpathSync(directory));
   fs.rmSync(root, { recursive: true, force: true });
 });
 
