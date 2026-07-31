@@ -1,0 +1,44 @@
+{
+  "name": "@crunchymurmur/transcribe-tauri",
+  "version": "0.1.0-alpha.1",
+  "description": "Parakeet, local Whisper and optional BYO-key Groq transcription for Tauri 2.",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@tauri-apps/api": ">=2.11.0 <3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-streetcoder/crunchymurmur-transcription.git",
+    "directory": "packages/transcribe-tauri"
+  },
+  "homepage": "https://github.com/a-streetcoder/crunchymurmur-transcription/tree/main/packages/transcribe-tauri",
+  "bugs": {
+    "url": "https://github.com/a-streetcoder/crunchymurmur-transcription/issues"
+  },
+  "keywords": [
+    "transcription",
+    "speech-to-text",
+    "on-device",
+    "tauri",
+    "parakeet",
+    "whisper",
+    "groq"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

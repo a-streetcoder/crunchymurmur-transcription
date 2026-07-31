@@ -1,0 +1,45 @@
+{
+  "name": "@crunchymurmur/transcribe-node",
+  "version": "0.1.0-alpha.1",
+  "description": "Private, on-device transcription for Node.js and Electron applications.",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "whisper-cli.js",
+    "whisper-runtime.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-streetcoder/crunchymurmur-transcription.git",
+    "directory": "packages/transcribe-node"
+  },
+  "homepage": "https://github.com/a-streetcoder/crunchymurmur-transcription/tree/main/packages/transcribe-node",
+  "bugs": {
+    "url": "https://github.com/a-streetcoder/crunchymurmur-transcription/issues"
+  },
+  "keywords": [
+    "transcription",
+    "speech-to-text",
+    "on-device",
+    "electron",
+    "parakeet",
+    "whisper"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

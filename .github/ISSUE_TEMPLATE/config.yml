@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Integration questions
+    url: https://github.com/a-streetcoder/crunchymurmur-transcription/discussions
+    about: Ask for help integrating the SDK without filing a defect.
+  - name: Security report
+    url: https://github.com/a-streetcoder/crunchymurmur-transcription/security/advisories/new
+    about: Privately report vulnerabilities or exposed credentials.
+

@@ -1,0 +1,45 @@
+name: Bug report
+description: Report a reproducible defect in an engine, adapter or example.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: host
+    attributes:
+      label: Host
+      options:
+        - Node.js
+        - Electron
+        - Tauri
+        - Rust
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: engine
+    attributes:
+      label: Engine and model
+      placeholder: Parakeet V3, Whisper Large V3 Turbo Q5, Groq Whisper…
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include minimal code, expected behaviour and actual behaviour. Do not include credentials or private audio.
+    validations:
+      required: true
+  - type: input
+    id: error-code
+    attributes:
+      label: Stable error code
+

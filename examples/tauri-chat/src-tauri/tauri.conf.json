@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "CrunchyMurmur SDK Chat",
+  "version": "0.1.0-alpha.1",
+  "identifier": "com.crunchymurmur.sdk-chat",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "title": "CrunchyMurmur SDK Chat",
+        "width": 1120,
+        "height": 760,
+        "minWidth": 820,
+        "minHeight": 600,
+        "resizable": true
+      }
+    ]
+  },
+  "bundle": {
+    "active": false
+  }
+}

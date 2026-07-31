@@ -1,0 +1,16 @@
+{
+  "name": "crunchymurmur-tauri-chat-demo",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "description": "Tauri chat composer using the CrunchyMurmur transcription SDK.",
+  "license": "MIT",
+  "scripts": {
+    "prepare:frontend": "node prepare-frontend.js",
+    "start": "npm run prepare:frontend && tauri dev --release",
+    "start:debug": "npm run prepare:frontend && tauri dev",
+    "build": "npm run prepare:frontend && tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.0"
+  }
+}

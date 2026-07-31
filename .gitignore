@@ -1,0 +1,17 @@
+node_modules/
+target/
+build/
+dist/
+*.log
+*.tmp
+*.partial
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+examples/tauri-chat/dist/
+examples/tauri-chat/src-tauri/gen/
+

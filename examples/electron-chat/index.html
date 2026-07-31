@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'none'"
+  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrunchyMurmur SDK Chat</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="brand-copy">
+        <h1>CrunchyMurmur SDK Chat</h1>
+        <p data-i18n="subtitle"></p>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite">
+        <span class="status-dot"></span>
+        <span id="statusText" data-i18n="ready"></span>
+      </div>
+    </header>
+
+    <details class="setup" id="setup">
+      <summary data-i18n="settings"></summary>
+      <div class="setup-grid">
+        <label class="field">
+          <span data-i18n="engine"></span>
+          <select id="engine">
+            <option value="parakeet" data-i18n="parakeetLocal"></option>
+            <option value="whisper" data-i18n="whisperLocal"></option>
+            <option value="groq" data-i18n="groqCloud"></option>
+          </select>
+          <span class="field-hint" id="privacyHint"></span>
+        </label>
+
+        <div class="field" id="modelField">
+          <span class="field-label" data-i18n="model"></span>
+          <div class="control-row">
+            <select id="model"></select>
+            <button class="secondary" id="installModel" type="button" data-i18n="downloadModel"></button>
+          </div>
+          <div class="field-hint" id="modelHint" data-i18n="modelHint"></div>
+          <progress id="modelProgress" max="100" value="0" hidden></progress>
+        </div>
+
+        <div class="field" id="groqField" hidden>
+          <span class="field-label" data-i18n="groqKey"></span>
+          <div class="control-row">
+            <input
+              id="groqKey"
+              type="password"
+              autocomplete="off"
+              data-i18n-placeholder="groqKeyPlaceholder"
+            >
+            <button class="secondary" id="saveGroqKey" type="button" data-i18n="useForSession"></button>
+          </div>
+          <div class="field-hint" id="groqKeyHint" data-i18n="groqKeyHint"></div>
+        </div>
+
+        <div class="field">
+          <span class="field-label" data-i18n="microphone"></span>
+          <div class="control-row">
+            <select id="microphone"></select>
+            <button class="tertiary" id="refreshMicrophones" type="button" data-i18n="refresh"></button>
+          </div>
+          <div class="field-hint" data-i18n="microphoneHint"></div>
+        </div>
+
+        <label class="field">
+          <span data-i18n="language"></span>
+          <select id="language">
+            <option value="auto" data-i18n="automatic"></option>
+            <option value="en">English</option>
+            <option value="it">Italiano</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="da">Dansk</option>
+            <option value="no">Norsk</option>
+            <option value="sv">Svenska</option>
+            <option value="nl">Nederlands</option>
+            <option value="pl">Polski</option>
+            <option value="tr">Türkçe</option>
+            <option value="ar">العربية</option>
+            <option value="hi">हिन्दी</option>
+            <option value="ru">Русский</option>
+            <option value="uk">Українська</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+          </select>
+        </label>
+
+        <div class="field">
+          <span class="field-label" data-i18n="shortcut"></span>
+          <div class="shortcut-row">
+            <div class="shortcut-display" id="shortcutDisplay"></div>
+            <button class="tertiary" id="recordShortcut" type="button" data-i18n="changeShortcut"></button>
+          </div>
+          <div class="field-hint" id="shortcutHint" data-i18n="shortcutHint"></div>
+        </div>
+      </div>
+    </details>
+
+    <section class="conversation" id="conversation" aria-live="polite">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-orb" aria-hidden="true"></div>
+        <p data-i18n="empty"></p>
+      </div>
+    </section>
+
+    <section class="composer" data-i18n-aria-label="composer">
+      <textarea
+        id="message"
+        rows="1"
+        maxlength="4000"
+        data-i18n-placeholder="placeholder"
+      ></textarea>
+      <button class="record" id="record" type="button">
+        <span class="record-icon" aria-hidden="true"></span>
+        <span id="recordLabel" data-i18n="record"></span>
+      </button>
+      <button class="send" id="send" type="button" data-i18n="send"></button>
+    </section>
+  </main>
+  <script src="./host-adapter.js"></script>
+  <script src="./i18n.js"></script>
+  <script src="./renderer.js"></script>
+</body>
+</html>

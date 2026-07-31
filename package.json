@@ -1,0 +1,39 @@
+{
+  "name": "crunchymurmur-transcription",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "description": "Local-first transcription primitives for Electron, Node.js and Tauri applications.",
+  "license": "MIT",
+  "homepage": "https://github.com/a-streetcoder/crunchymurmur-transcription#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-streetcoder/crunchymurmur-transcription.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a-streetcoder/crunchymurmur-transcription/issues"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check:js": "node scripts/check-js.js",
+    "check:docs": "node scripts/check-docs.js",
+    "check:repo": "node scripts/check-repository-links.js",
+    "check:secrets": "node scripts/check-secrets.js",
+    "check": "npm run check:js && npm test && npm run check:docs && npm run check:repo && npm run check:secrets",
+    "release:check": "node scripts/check-sdk-release.js",
+    "prepare:whisper:win": "node scripts/prepare-whisper-runtime.js --platform win32 --arch all",
+    "prepare:whisper:mac": "node scripts/prepare-whisper-runtime.js --platform darwin --arch universal",
+    "prepare:whisper:linux": "node scripts/prepare-whisper-runtime.js --platform linux --arch all",
+    "prepare:transcriber:win": "node scripts/prepare-transcriber-runtime.js --platform win32 --arch all",
+    "prepare:transcriber:mac": "node scripts/prepare-transcriber-runtime.js --platform darwin --arch universal",
+    "prepare:transcriber:linux": "node scripts/prepare-transcriber-runtime.js --platform linux --arch all",
+    "demo:electron:install": "npm ci --prefix examples/electron-chat",
+    "demo:electron": "npm start --prefix examples/electron-chat",
+    "demo:tauri:install": "npm ci --prefix examples/tauri-chat",
+    "demo:tauri": "npm start --prefix examples/tauri-chat",
+    "demo:tauri:debug": "npm run start:debug --prefix examples/tauri-chat"
+  }
+}
+
