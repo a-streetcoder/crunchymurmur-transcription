@@ -20,14 +20,25 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    groups:
+      rust-engine:
+        patterns:
+          - "*"
   - package-ecosystem: cargo
     directory: /packages/transcribe-tauri
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    groups:
+      tauri-plugin:
+        patterns:
+          - "*"
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
-
+    groups:
+      github-actions:
+        patterns:
+          - "*"
