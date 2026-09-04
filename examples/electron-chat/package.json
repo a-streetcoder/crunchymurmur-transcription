@@ -14,7 +14,7 @@
     "uiohook-napi": "^1.5.5"
   },
   "devDependencies": {
-    "electron": "^43.1.0"
+    "electron": "^44.1.0"
   },
   "allowScripts": {
     "uiohook-napi@1.5.5": true
